@@ -287,7 +287,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-[var(--brand-text)] italic leading-relaxed">
-                  "A clareza que recebi foi impressionante. Marina conseguiu identificar exatamente o que estava me bloqueando e me deu passos práticos que funcionaram imediatamente."
+                  {`"A clareza que recebi foi impressionante. Marina conseguiu identificar exatamente o que estava me bloqueando e me deu passos práticos que funcionaram imediatamente."`}
                 </p>
               </div>
               
@@ -309,7 +309,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-[var(--brand-text)] italic leading-relaxed">
-                  "Nunca imaginei que uma sessão pudesse ser tão precisa. Saí com um plano claro e meu negócio começou a fluir de forma diferente."
+                  {`"Nunca imaginei que uma sessão pudesse ser tão precisa. Saí com um plano claro e meu negócio começou a fluir de forma diferente."`}
                 </p>
               </div>
               
@@ -331,7 +331,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-[var(--brand-text)] italic leading-relaxed">
-                  "O resultado foi além das minhas expectativas. Marina tem um dom especial para enxergar o que nós não conseguimos ver sozinhas."
+                  {`"O resultado foi além das minhas expectativas. Marina tem um dom especial para enxergar o que nós não conseguimos ver sozinhas."`}
                 </p>
               </div>
             </div>
@@ -408,14 +408,21 @@ export default function Home() {
                       </svg>
                       <span className="text-[var(--brand-text)]">Resumo com ações por email</span>
                     </div>
-                   
+                    <div className="flex items-center gap-3">
+                      <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-[var(--brand-text)]">Garantia de 7 dias</span>
+                    </div>
                   </div>
                   
                   <div className="pt-4">
                     <CTAButton href="https://wa.me/5511999999999?text=Quero%20comprar%20a%20sessão%20de%20leitura%20energética" variant="primary" className="w-full text-lg py-4 shadow-glow">
                       Reservar Minha Sessão
                     </CTAButton>
-                   
+                    <p className="text-center text-[var(--brand-text-light)] text-sm mt-3">
+                      Pagamento seguro • Resposta imediata
+                    </p>
                   </div>
                 </div>
               </div>
@@ -450,7 +457,32 @@ export default function Home() {
                     15 minutos para identificar seu principal bloqueio
                   </h3>
                   
-                 
+                  <div className="mb-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-[var(--brand-text)]">Identificação do bloqueio principal</span>
+                    </div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-[var(--brand-text)]">Orientação inicial personalizada</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-[var(--brand-text)]">Sem compromisso de compra</span>
+                    </div>
+                  </div>
                   
                   <form action={bookCall} className="space-y-4">
                     <div>
@@ -568,7 +600,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-[var(--brand-text)] mb-3">
-                      Não sou 'mística', funciona mesmo assim?
+                      Não sou {'mística'}, funciona mesmo assim?
                     </h3>
                     <p className="text-[var(--brand-text-light)] leading-relaxed">
                       Perfeitamente! Você não precisa acreditar em nada específico. O trabalho funciona independente das suas crenças, pois trabalho com informações energéticas objetivas.
@@ -656,6 +688,7 @@ export default function Home() {
         </section>
       </main>
       
+      <FloatingWhatsApp />
     </>
   );
 }
